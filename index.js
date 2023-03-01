@@ -21,7 +21,7 @@ function chooseWeapon() {
     playerWeapon = userChoice.next().value;
 
     const userHappy = confirm(
-      `Press ok to select:\n\n${playerWeapon}\n\nor cancel to choose another.`
+      `${playerWeapon}\n\nPress cancel to choose another ok to use.`
     );
 
     if (userHappy) {
@@ -1079,7 +1079,7 @@ function nameGen() {
     playerName = `${names[betterRandom(999)]} ${names[betterRandom(999)]}`;
 
     const userHappy = confirm(
-      `I've Divined that your name is:\n\n${playerName}.\n\nIf this is correct, press ok, otherwise press cancel and I'll try again!`
+      `I've decided that your name is:\n\n${playerName}.\n\nPress cancel if you don't like it and I'll try again!`
     );
 
     if (userHappy) {
@@ -1112,7 +1112,7 @@ function game() {
   alert(`Let's Play!`);
 
   const scoreBoard = (scores) =>
-    `\n\n--------------------\nMeatbag: ${scores.player}\nThe Machine: ${scores.cpu}\n\nTies: ${scores.tie}\n\n--------------------\n`;
+    `\n\n--------------------\nMeatbag: ${scores.player}\nThe Machine: ${scores.cpu}\n\nTies: ${scores.tie}\n--------------------`;
 
   while (true) {
     let message;
@@ -1167,7 +1167,7 @@ function game() {
     }
 
     alert(
-      `Player used ${playerWeapon}! The Machine struck back with ${cpuWeapon}.\n\n${message}${scoreBoard(
+      `${playerName} The Meatbag used ${playerWeapon}!\n\nThe Machine struck back with ${cpuWeapon}!\n\n${message}${scoreBoard(
         roundScore[playerName]
       )}`
     );
