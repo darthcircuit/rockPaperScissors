@@ -1174,4 +1174,14 @@ function game() {
   }
 }
 
-alert(`${game()} has won the game!`);
+function menu() {
+  userChoice = confirm(
+    "Press OK to start the game, or press cancel to quit the game!"
+  );
+
+  if (userChoice) {
+    alert(`${game()} has won the game!`);
+  }
+}
+
+menu();
